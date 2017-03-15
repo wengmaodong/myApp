@@ -1,0 +1,51 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<!-- <ion-tabs delegate-handle="topic-category" class="tabs-striped tabs-top tabs-background-stable tabs-color-assertive" ng-class="$root.tabsHidden">
+  <ion-tab title="分享" on-select="onTabSelected()"></ion-tab>
+  <ion-tab title="问答" on-select="onTabSelected()"></ion-tab>
+  <ion-tab title="招聘" on-select="onTabSelected()"></ion-tab>
+  <ion-tab title="吐槽" on-select="onTabSelected()"></ion-tab>
+</ion-tabs> -->
+
+
+<ion-side-menus>
+    <ion-side-menu side="left" width="275" ng-controller="TopicsCtrl">
+        <ion-list>
+            <ion-item>
+                我是一个侧边栏 bitch！
+            </ion-item>
+            <ion-item ng-repeat="item in items">
+                {{item}}
+            </ion-item>
+
+        </ion-list>
+    </ion-side-menu>
+    <ion-side-menu-content>
+        <ion-tabs class="tabs-icon-top tabs-stable tabs-color-positive {{hideTabs}} ">
+
+            <!-- Dashboard Tab -->
+            <ion-tab title="消息" icon-off="ion-ios-chatbubble-outline" icon-on="ion-ios-chatbubble" href="#/tab/home">
+                <ion-nav-view name="tab-home"></ion-nav-view>
+            </ion-tab>
+
+            <!-- Dashboard Tab -->
+            <ion-tab title="联系人" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/explore">
+                <ion-nav-view name="tab-explore"></ion-nav-view>
+            </ion-tab>
+
+
+            <!-- Account Tab -->
+            <ion-tab title="动态" icon-off="ion-ios-star-outline" icon-on="ion-ios-star" href="#/tab/my">
+                <ion-nav-view name="tab-my"></ion-nav-view>
+            </ion-tab>
+
+
+        </ion-tabs>
+
+    </ion-side-menu-content>
+</ion-side-menus>
+
+

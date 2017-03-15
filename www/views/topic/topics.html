@@ -1,0 +1,39 @@
+
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <i class="message-header" ng-click="toggleLeft()"></i>
+        <div class="h1 title">
+            <div class="message-title clearfix">
+                <span class="active">消息</span>
+                <span>电话</span>
+            </div>
+        </div>
+        <button class="button button-clear button-icon icon ion-android-add"></button>
+    </ion-header-bar>
+    <ion-content class="has-tabs has-header">
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+
+
+
+        <!--<ion-list class="topics">
+            <ion-item class="item-avatar" collection-repeat="topic in topics" href="#/tab/topics/{{topic.id}}"
+                      collection-item-width="'100%'" collection-item-height="65px">
+                <img ng-src="{{topic.author.avatar_url|avatarFilter}}" reset-img>
+                <h2>{{topic.title}}</h2>
+                <p class="summary">
+                    <span ng-if="!topic.top && !topic.good" class="tab">{{topic.tab|tabName}}</span>
+                    <span ng-if="topic.top" class="tab hl">置顶</span>
+                    <span ng-if="topic.good && !topic.top" class="tab hl">精华</span>
+                    {{topic.author.loginname}}
+                    <span class="item-note ago" am-time-ago="topic.last_reply_at">
+          </span>
+                </p>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+
+        <ion-spinner class="topic-spinner ng-hide" ng-show="!topics"
+                     ng-style="{'top':getHalfHeight()+'px'}"></ion-spinner>-->
+    </ion-content>
+</ion-view>
